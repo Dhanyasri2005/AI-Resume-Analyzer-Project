@@ -1,21 +1,93 @@
-<<<<<<< HEAD
-# React + Vite
+# AI Resume Analyzer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Project Description
 
-Currently, two official plugins are available:
+AI Resume Analyzer is a MERN Stack web application that helps users analyze their resumes using AI. Users can upload a resume, compare it with a job description, calculate an ATS match score, identify missing skills, receive improvement suggestions, and generate interview questions.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
 
-## React Compiler
+* User Registration and Login
+* Resume Upload and Analysis
+* ATS Match Score Calculation
+* Missing Skills Detection
+* Resume Improvement Suggestions
+* Interview Question Generation
+* Responsive Dashboard UI
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Technologies Used
 
-## Expanding the ESLint configuration
+* React.js
+* Vite
+* Node.js
+* Express.js
+* MongoDB Atlas
+* Gemini AI API
+* Vercel
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-=======
-# AI-Resume-Analyzer-Final
-AI-powered Resume Analyzer built with React, Node.js, Express, and Gemini AI. Analyzes resumes against job descriptions, calculates ATS match scores, identifies missing skills, provides improvement suggestions, and generates interview questions through an interactive dashboard.
->>>>>>> cf83721ca3e4f1e4d36a265d6d6f43b1bd3b12a2
+## Database Schema
+
+### User Collection
+
+```json
+{
+  "username": "String",
+  "email": "String",
+  "password": "String",
+  "createdAt": "Date"
+}
+```
+
+### Resume Analysis Collection
+
+```json
+{
+  "userId": "ObjectId",
+  "resumeText": "String",
+  "jobDescription": "String",
+  "matchScore": "Number",
+  "missingSkills": ["String"],
+  "suggestions": ["String"],
+  "interviewQuestions": ["String"],
+  "createdAt": "Date"
+}
+```
+
+## Setup Instructions
+
+### Clone Repository
+
+git clone <repository-url>
+
+### Client Setup
+
+cd client
+npm install
+npm run dev
+
+### Server Setup
+
+cd server
+npm install
+npm start
+
+## Environment Variables
+
+### Server
+
+MONGO_URI=your_mongodb_connection_string
+
+JWT_SECRET=your_secret_key
+
+GEMINI_API_KEY=your_gemini_api_key
+
+## Deployment
+
+Frontend: Vercel
+
+Backend: Vercel
+
+Database: MongoDB Atlas
+
+## Author
+
+Dhanyasri
